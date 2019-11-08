@@ -65,7 +65,7 @@ void loop() {
   
   boolean a = mfrc522.PICC_IsNewCardPresent();
   boolean b = mfrc522.PICC_ReadCardSerial();
-  int c = 2+digitalRead(IRQ_PIN);
+  //int c = 2+digitalRead(IRQ_PIN);
   //Serial.println(i);
   //Serial.print(F("Card UID:"));
   //dump_byte_array(mfrc522.uid.uidByte, mfrc522.uid.size);
@@ -76,6 +76,7 @@ void loop() {
   Serial.print(", ");
   dump_byte_array(mfrc522.uid.uidByte, mfrc522.uid.size);
   Serial.println("");
+  //mfrc522.PICC_DumpToSerial(&(mfrc522.uid));
   delay(1000);
   
 
